@@ -2,6 +2,8 @@ import express from "express";
 import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
 import 'dotenv/config';
+import ricetteData from './data/ricette.js';
+
 
 const app = express();
 const port = 3000;
@@ -14,8 +16,34 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.get("/cookies", (req, res) => {
-  res.render("cookies.ejs");
+app.get("/visite", (req, res) => {
+  res.render("visite.ejs");
+});
+
+app.get("/servizi", (req, res) => {
+  res.render("servizi.ejs");
+});
+
+app.get('/ricette', (req, res) => {
+    const categoriaSelezionata = req.query.categoria || 'tutte';
+    let ricetteFiltrate = ricetteData;
+    if (categoriaSelezionata !== 'tutte') {
+        ricetteFiltrate = ricetteData.filter(r => r.categoria === categoriaSelezionata);
+    }
+    res.render('ricette.ejs', { 
+        ricette: ricetteFiltrate, 
+        categoriaAttiva: categoriaSelezionata 
+    });
+});
+app.get('/ricette/:id', (req, res) => {
+    const idRicetta = req.params.id;
+    const ricettaTrovata = ricetteData.find(r => r.id === idRicetta);
+    
+    if (!ricettaTrovata) {
+        return res.status(404).send("Ricetta non trovata");
+    }
+    
+    res.render('ricetta-dettaglio', { ricetta: ricettaTrovata });
 });
 
 app.get("/chi-sono", (req, res) => {
@@ -26,8 +54,16 @@ app.get("/contatti", (req, res) => {
   res.render("contatti.ejs");
 });
 
+app.get("/cookies", (req, res) => {
+  res.render("cookies.ejs");
+});
+
 app.get("/privacy", (req, res) => {
   res.render("privacy.ejs");
+});
+
+app.get("/faq", (req, res) => {
+  res.render("faq.ejs");
 });
 
 // EMAIL FORM

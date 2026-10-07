@@ -8,6 +8,7 @@
 /* Aggiunge uno spazio di sicurezza per evitare che l'header copra le sezioni */
 html {
   scroll-behavior: smooth; /* Rende lo scorrimento fluido quando clicchi sui link */
+  overflow-y: scroll; /* Previene i saltini di layout */
 }
 
 body {
@@ -59,8 +60,8 @@ section[id] {
 }
 
 .btn-outline-primary-custom {
-  color: var(--primary-color);
-  border-color: var(--primary-color);
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
   font-weight: 500;
 }
 
@@ -68,7 +69,6 @@ section[id] {
   background-color: var(--primary-color);
   color: #fff;
 }
-
 
 /* Hero Section */
 .hero-section {
