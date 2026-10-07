@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Sono</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/styles/chi-sono.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <!-- HEADER / NAVBAR -->
+    <%- include("partials/header.ejs") %>
+
+    <!-- INTRO / HERO CHI SONO -->
+    <header class="py-5 bg-light-custom">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span
+              class="badge bg-white text-primary-custom border px-3 py-2 rounded-pill mb-3 fw-semibold"
+            >
+              <i class="bi bi-person-badge me-1"></i> Biologa Nutrizionista
+            </span>
+            <h1 class="display-4 fw-bold lh-base mb-3">
+              Piacere, sono
+              <span class="text-primary-custom">Sarah Branchesi</span>.
+            </h1>
+            <p class="lead text-muted mb-4">
+              Credo fermamente che il cibo non sia solo carburante, ma cultura,
+              piacere e benessere psicofisico. Ti accompagno in un percorso di
+              educazione alimentare cucito sulla tua unicità.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#formazione" class="btn btn-primary-custom px-4 py-2"
+                >Il mio percorso</a
+              >
+              <a
+                href="https://wa.me/393314939653"
+                target="_blank"
+                class="btn btn-outline-dark px-4 py-2"
+                >Contattami</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <!-- Sostituisci l'immagine con una foto ritratto -->
+            <img
+              src="/images/sarah_pc.png"
+              class="img-fluid profile-img w-100"
+              style="max-height: 450px"
+              alt="Dott.ssa Sarah Branchesi"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- LA MIA FILOSOFIA -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-3">La mia filosofia nutrizionale</h2>
+            <p class="text-muted">
+              Il mio approccio clinico ed educativo rifiuta le diete drastiche,
+              i prodotti miracolosi e le restrizioni insostenibili che portano
+              solo a frustrazione e all'effetto yo-yo.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 bg-light-custom rounded-4 h-100 border-0">
+              <div class="text-primary-custom fs-1 mb-3">
+                <i class="bi bi-heart"></i>
+              </div>
+              <h4 class="fw-bold h5 mb-3">Zero Restrizioni Inutili</h4>
+              <p class="text-muted small mb-0">
+                Impareremo a inserire ogni alimento nel contesto di una vita
+                sociale e lavorativa attiva, senza demonizzare nessun gruppo
+                alimentare.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 bg-light-custom rounded-4 h-100 border-0">
+              <div class="text-primary-custom fs-1 mb-3">
+                <i class="bi bi-people"></i>
+              </div>
+              <h4 class="fw-bold h5 mb-3">Empatia e Ascolto</h4>
+              <p class="text-muted small mb-0">
+                Ogni persona ha un vissuto, preferenze di gusto e ritmi unici.
+                Il piano alimentare deve adattarsi a te, e non viceversa.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 bg-light-custom rounded-4 h-100 border-0">
+              <div class="text-primary-custom fs-1 mb-3">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <h4 class="fw-bold h5 mb-3">Educazione a Lungo Termine</h4>
+              <p class="text-muted small mb-0">
+                Il vero traguardo non è il numero sulla bilancia, ma acquisire
+                consapevolezza e autonomia alimentare che durino per tutta la
+                vita.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMAZIONE E TITOLI (TIMELINE) -->
+    <section id="formazione" class="py-5 bg-light-custom">
+      <div class="container py-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center mb-5">
+              <h2 class="fw-bold">Formazione & Studi</h2>
+              <p class="text-muted">
+                Rigore scientifico e continuo aggiornamento professionale
+              </p>
+            </div>
+
+            <div class="timeline bg-white p-4 p-md-5 rounded-4 shadow-sm">
+              <div class="timeline-item">
+                <h5 class="fw-bold text-primary-custom mb-1">
+                  Laurea Magistrale in Biologia Molecolare, Sanitaria e della
+                  Nutrizione
+                </h5>
+                <p class="text-muted small mb-2">
+                  Università degli Studi di Urbino "Carlo Bo"
+                </p>
+                <p class="text-secondary small mb-0">
+                  Percorso di studi specialistico incentrato sui meccanismi
+                  biochimici della nutrizione umana e sulla prevenzione clinica.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h5 class="fw-bold text-primary-custom mb-1">
+                  Abilitazione alla Professione & Iscrizione all'Ordine
+                </h5>
+                <p class="text-muted small mb-2">
+                  Ordine Nazionale dei Biologi (ONB)
+                </p>
+                <p class="text-secondary small mb-0">
+                  Iscritta regolarmente all'albo dei Biologi per l'esercizio
+                  della professione di Biologa Nutrizionista.
+                </p>
+              </div>
+
+              <div class="timeline-item mb-0">
+                <h5 class="fw-bold text-primary-custom mb-1">
+                  Divulgazione Scientifica e Progetti Editoriali
+                </h5>
+                <p class="text-muted small mb-2">
+                  Conferenze, Scuole e Progetti Editoriali
+                </p>
+                <p class="text-secondary small mb-0">
+                  Attività attiva sul territorio e online per diffondere una
+                  corretta informazione scientifica e contrastare le fake news
+                  in ambito alimentare.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE DOCUMENTI / PDF (Esempio per scaricare CV o Brochure) -->
+    <!-- SEZIONE DIVULGAZIONE, LIBRI E INTERVISTE -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <!-- 1. INTRODUZIONE DIVULGAZIONE -->
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <span
+              class="badge bg-light-custom text-primary-custom px-3 py-2 rounded-pill mb-3 fw-semibold"
+            >
+              <i class="bi bi-mic-fill me-1"></i> Divulgazione & Progetti
+            </span>
+            <h2 class="fw-bold mb-3">
+              La mia passione per la comunicazione scientifica
+            </h2>
+            <p class="text-muted lead fs-6">
+              Insegno l'alimentazione non solo come Nutrizionista, ma anche come
+              Divulgatrice Scientifica attraverso i miei libri, conferenze ed
+              attività didattiche in Istituti Scolastici e in festival
+              scientifici su territorio nazionale.
+            </p>
+          </div>
+        </div>
+
+        <!-- Spazio per foto della divulgazione / conferenze -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <!-- Sostituisci l'immagine con la foto delle conferenze/scuole -->
+            <img
+              src="/images/divulgazione-conferenza1.jpg"
+              class="img-fluid rounded-4 shadow-sm w-100"
+              alt="Sarah Branchesi Conferenze"
+              style="max-height: 400px; object-fit: cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- 2. I LIBRI -->
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-lg-10">
+            <h3 class="fw-bold text-center mb-4 text-primary-custom">
+              I Miei Libri
+            </h3>
+            <div class="row g-4">
+              <!-- Libro 1 -->
+              <div class="col-md-6">
+                <div
+                  class="card feature-card border p-4 h-100 shadow-sm d-flex flex-row align-items-center gap-3"
+                >
+                  <!-- Spazio foto copertina libro -->
+                  <img
+                    src="/images/libro1.jpg"
+                    alt="Copertina Libro 1"
+                    class="rounded"
+                    style="width: 100px; height: 140px; object-fit: cover"
+                  />
+                  <div>
+                    <h4 class="fw-bold h6 mb-1">La spesa dello scienziato</h4>
+                    <p class="text-muted small mb-3">
+                      Un viaggio divertente e scientifico alla scoperta delle
+                      proprietà sorprendenti e stravaganti degli alimenti di
+                      tutti i giorni, trasformati per l'occasione nei reagenti
+                      perfetti per esperimenti da fare a casa.
+                    </p>
+                    <a
+                      href="https://amzn.eu/d/0jeeII4K"
+                      target="_blank"
+                      class="btn btn-sm btn-primary-custom"
+                    >
+                      <i class="bi bi-amazon me-1"></i> Acquista su Amazon
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Libro 2 -->
+              <div class="col-md-6">
+                <div
+                  class="card feature-card border p-4 h-100 shadow-sm d-flex flex-row align-items-center gap-3"
+                >
+                  <!-- Spazio foto copertina libro -->
+                  <img
+                    src="/images/libro2.jpg"
+                    alt="Copertina Libro 2"
+                    class="rounded"
+                    style="width: 100px; height: 140px; object-fit: cover"
+                  />
+                  <div>
+                    <h4 class="fw-bold h6 mb-1">#Bilanciabugiarda</h4>
+                    <p class="text-muted small mb-3">
+                      Una guida ironica e pratica per smascherare le false
+                      credenze e i falsi miti alimentari dei social network,
+                      imparando a gestire il rapporto con la bilancia e con il
+                      cibo senza cadere nelle trappole delle mode del momento.
+                    </p>
+                    <a
+                      href="https://amzn.eu/d/04jbiqDu"
+                      target="_blank"
+                      class="btn btn-sm btn-primary-custom"
+                    >
+                      <i class="bi bi-amazon me-1"></i> Acquista su Amazon
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. INTERVISTE (YOUTUBE & PDF) -->
+        <div class="row justify-content-center g-4">
+          <!-- Intervista YouTube -->
+          <div class="col-lg-6">
+            <div class="card feature-card border p-4 h-100 shadow-sm">
+              <div class="d-flex align-items-center mb-3">
+                <div
+                  class="icon-box mb-0 me-3 bg-danger bg-opacity-10 text-danger"
+                >
+                  <i class="bi bi-youtube"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold h5 mb-1">
+                    Intervista Radio
+                  </h4>
+                  <span class="text-muted small"
+                    >Guarda l'intervista su YouTube</span
+                  >
+                </div>
+              </div>
+              <p class="text-muted small mb-3">
+                Un approfondimento video in cui spiego in modo semplice e scientifico l'importanza e i benefici dei frutti rossi all'interno di una sana alimentazione.
+              </p>
+              <!-- Embed Video YouTube  -->
+              <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-sm">
+                <iframe
+                  src="https://www.youtube.com/embed/uT6hbzNYSFc"
+                  title="Intervista Dott.ssa Sarah Branchesi"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Intervista in PDF -->
+          <div class="col-lg-6">
+            <div
+              class="card feature-card border p-4 h-100 shadow-sm d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-box mb-0 me-3">
+                    <i class="bi bi-file-earmark-pdf-fill"></i>
+                  </div>
+                  <div>
+                    <h4 class="fw-bold h5 mb-1">
+                      Intervista Stampata
+                    </h4>
+                    <span class="text-muted small"
+                      >Scarica il documento in PDF</span
+                    >
+                  </div>
+                </div>
+                <p class="text-muted small mb-3">
+                  Leggi l'intervista dedicata al mio percorso professionale e ai
+                  consigli nutrizionali pubblicata su rivista o testata
+                  giornalistica.
+                </p>
+                <!-- Aanteprima associata all'intervista PDF -->
+                <div class="mb-3 text-center">
+                  <img
+                    src="/images/anteprima-intervista.jpg"
+                    alt="Anteprima Intervista"
+                    class="img-fluid rounded-3 shadow-sm"
+                    style="max-height: 150px; object-fit: cover; width: 100%"
+                  />
+                </div>
+              </div>
+              <div>
+                <a
+                  href="/docs/intervista.pdf"
+                  target="_blank"
+                  class="btn btn-outline-dark w-100"
+                >
+                  <i class="bi bi-download me-2"></i> Scarica Intervista (PDF)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <%- include("partials/footer.ejs") %>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

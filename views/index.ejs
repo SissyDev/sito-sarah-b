@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarah Branchesi</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span
+              class="badge bg-primary-light text-primary-custom px-3 py-2 rounded-pill mb-3 fw-semibold"
+            >
+              <i class="bi bi-award me-1"></i> Biologa Nutrizionista &
+              Divulgatrice Scientifica
+            </span>
+            <h1 class="display-4 fw-bold lh-base mb-3">
+              Riscopri il tuo benessere con un
+              <span class="text-primary-custom">percorso su misura</span>.
+            </h1>
+            <p class="lead text-muted mb-4">
+              Il mio obiettivo è aiutarti a trovare una nuova armonia con il
+              cibo: creare un piano alimentare sostenibile, senza inutili
+              restrizioni, adattato alle tue reali esigenze e al tuo stile di
+              vita.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a
+                href="https://wa.me/393314939653"
+                class="btn btn-primary-custom btn-lg px-4 shadow-sm"
+              >
+                Prenota un Appuntamento <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+              <a
+                href="#servizi"
+                class="btn btn-outline-primary-custom btn-lg px-4"
+              >
+                Scopri i Servizi
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img
+              src="/images/sarah.png"
+              class="img-fluid img-sarah"
+              alt="Dott.ssa Sarah Branchesi"
+              width="550"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO / APPROCCIO -->
+    <section id="chi-sono" class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <div
+              class="p-4 bg-light-custom rounded-4 border-start border-4 border-primary"
+            >
+              <h3 class="fw-bold mb-3 text-primary-custom">
+                Un metodo basato sull'ascolto
+              </h3>
+              <p class="text-muted mb-0">
+                Specializzata in percorsi nutrizionali per condizioni
+                fisiologiche e patologiche. Affronto ogni piano clinico ed
+                educativo unendo il rigore scientifico alla massima empatia
+                verso la persona.
+              </p>
+              <a
+                href="/chi-sono"
+                class="btn btn-primary-custom btn-lg px-4 mt-4 shadow-lg border"
+              >
+                Leggi di più
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h2 class="fw-bold mb-4">
+              Non la solita dieta restrittiva, ma educazione e consapevolezza
+            </h2>
+            <p class="text-muted mb-3">
+              La mia formazione unisce la laurea magistrale in Biologia
+              molecolare, sanitaria e della nutrizione all'università di Urbino
+              con continui aggiornamenti clinici.
+            </p>
+            <p class="text-muted mb-4">
+              Insegno l'alimentazione non solo in ambulatorio, ma anche
+              attraverso la divulgazione scientifica in conferenze, istituti
+              scolastici e progetti editoriali.
+            </p>
+            <div class="row g-3 text-secondary">
+              <div class="col-sm-6 d-flex align-items-center">
+                <i
+                  class="bi bi-check-circle-fill text-primary-custom fs-5 me-2"
+                ></i>
+                Piani alimentari personalizzati
+              </div>
+              <div class="col-sm-6 d-flex align-items-center">
+                <i
+                  class="bi bi-check-circle-fill text-primary-custom fs-5 me-2"
+                ></i>
+                Sostegno e monitoraggio costante
+              </div>
+              <div class="col-sm-6 d-flex align-items-center">
+                <i
+                  class="bi bi-check-circle-fill text-primary-custom fs-5 me-2"
+                ></i>
+                Gestione dietetica delle patologie
+              </div>
+              <div class="col-sm-6 d-flex align-items-center">
+                <i
+                  class="bi bi-check-circle-fill text-primary-custom fs-5 me-2"
+                ></i>
+                Disponibilità anche Online
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIZI PRINCIPALI -->
+    <section id="servizi" class="py-5 bg-light-custom">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="location-badge mb-2 d-inline-block"
+            >I MIEI PERCORSI</span
+          >
+          <h2 class="fw-bold">Di cosa mi occupo</h2>
+          <p class="text-muted">
+            Soluzioni mirate per il tuo benessere psicofisico e nutrizionale
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="feature-card p-4 h-50 shadow-sm h-100">
+              <div class="icon-box"><i class="bi bi-apple"></i></div>
+              <h4 class="fw-bold h5 mb-3">Nutrizione Clinica & Fisiologica</h4>
+              <p class="text-muted small mb-0">
+                Percorsi nutrizionali per adulti e bambini mirati al
+                dimagrimento, ricomposizione corporea o esigenze in particolari
+                momenti della vita (gravidanza, allattamento, menopausa).
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card p-4 h-100 shadow-sm">
+              <div class="icon-box"><i class="bi bi-shield-plus"></i></div>
+              <h4 class="fw-bold h5 mb-3">Supporto Patologie & Intolleranze</h4>
+              <p class="text-muted small mb-0">
+                Collaborazione nella gestione dietetica delle principali
+                patologie in sinergia con le terapie mediche, test specifici
+                come il breath test al lattosio e analisi del microbiota.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card p-4 h-100 shadow-sm">
+              <div class="icon-box"><i class="bi bi-laptop"></i></div>
+              <h4 class="fw-bold h5 mb-3">Consulenze Online</h4>
+              <p class="text-muted small mb-0">
+                Servizio di consulenza da remoto tramite videochiamata dedicato
+                a chi ha difficoltà a raggiungere gli ambulatori fisici, con la
+                stessa accuratezza e attenzione.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI DI RICEVIMENTO -->
+    <section id="sedi" class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="location-badge mb-2 d-inline-block">DOVE RICEVO</span>
+          <h2 class="fw-bold">I miei ambulatori</h2>
+          <p class="text-muted">
+            Vieni a trovarmi nelle sedi di Pesaro e Montecchio
+          </p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <!-- Sede Pesaro -->
+          <div class="col-md-6">
+            <div class="card feature-card border p-4 h-100 shadow-sm">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-box mb-0 me-3">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold h5 mb-1">Pesaro Centro</h4>
+                  <span class="text-muted small">Ambulatorio Medico</span>
+                </div>
+              </div>
+              <p class="text-muted mb-3">
+                📍 Via XI Febbraio, n. 20, Pesaro (61121)
+              </p>
+              <p class="small text-secondary mb-0">
+                Visite per adulti e bambini di qualsiasi età. Disponibilità su
+                appuntamento.
+              </p>
+            </div>
+          </div>
+          <!-- Sede Montecchio -->
+          <div class="col-md-6">
+            <div class="card feature-card border p-4 h-100 shadow-sm">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-box mb-0 me-3">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold h5 mb-1">Montecchio di Vallefoglia</h4>
+                  <span class="text-muted small"
+                    >Ambulatorio "Movement Lab"</span
+                  >
+                </div>
+              </div>
+              <p class="text-muted mb-3">
+                📍 Via Carpegna (o Fermi), n. 18, Montecchio
+              </p>
+              <p class="small text-secondary mb-0">
+                Ambiente moderno e attrezzato per un supporto multidisciplinare
+                e mirato al benessere e allo sport.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA CONTATTI / BANNER FINALE -->
+    <section
+      id="contatti"
+      class="py-5 text-white bg-primary-custom text-center"
+    >
+      <div class="container py-4">
+        <h2 class="fw-bold mb-3">Inizia oggi il tuo percorso di cambiamento</h2>
+        <p class="lead mb-4 mx-auto" style="max-width: 600px">
+          Contattami per informazioni o per prenotare un appuntamento per la tua
+          dieta personalizzata.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a
+            href="https://wa.me/393314939653"
+            target="_blank"
+            class="btn btn-light text-primary-custom btn-lg px-4 fw-bold shadow"
+          >
+            <i class="bi bi-whatsapp me-2"></i> Scrivimi su WhatsApp
+          </a>
+          <a
+            href="mailto:nutrizione@sarahbranchesi.com"
+            class="btn btn-outline-light btn-lg px-4"
+          >
+            <i class="bi bi-envelope me-2"></i> Invia una Email
+          </a>
+        </div>
+      </div>
+    </section>
+    <main class="container"></main>
+
+    <%- include("partials/footer.ejs") %>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

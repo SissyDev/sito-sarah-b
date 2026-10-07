@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Contatti e Sedi | Dott.ssa Sarah Branchesi - Biologa Nutrizionista
+    </title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/contatti.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+
+    <!-- INTRO PAGINA -->
+    <header class="py-5 bg-light-custom text-center">
+      <div class="container py-3">
+        <span
+          class="badge bg-white text-primary-custom border px-3 py-2 rounded-pill mb-3 fw-semibold"
+        >
+          <i class="bi bi-geo-alt-fill me-1"></i> Dove Ricevo
+        </span>
+        <h1 class="display-4 fw-bold mb-3">Contatti e Ambulatori</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 600px">
+          Prenota una consulenza nutrizionale nei miei studi di Pesaro e
+          Montecchio oppure compila il modulo per qualsiasi informazione.
+        </p>
+      </div>
+    </header>
+
+    <!-- SEZIONE PRINCIPALE: FORM & INFO -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="row g-5 align-items-stretch">
+          <!-- COLONNA INFO RAPIDE & WHATSAPP -->
+          <div class="col-lg-5">
+            <div
+              class="bg-light-custom p-4 p-md-5 rounded-4 h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <h3 class="fw-bold h4 mb-4 text-primary-custom">
+                  Informazioni Dirette
+                </h3>
+
+                <!-- Telefono / WhatsApp -->
+                <div class="d-flex align-items-start mb-4">
+                  <div
+                    class="icon-box bg-success bg-opacity-10 text-success me-3"
+                  >
+                    <i class="bi bi-whatsapp"></i>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold h6 mb-1">WhatsApp & Telefono</h5>
+                    <p class="text-muted small mb-1">+39 331 493 9653</p>
+                    <a
+                      href="https://wa.me/393314939653"
+                      target="_blank"
+                      class="text-decoration-none small text-success fw-semibold"
+                    >
+                      Scrivimi un messaggio
+                      <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Orari -->
+                <div class="d-flex align-items-start mb-4">
+                  <div class="icon-box me-3">
+                    <i class="bi bi-clock-fill"></i>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold h6 mb-1">Orari di Segreteria</h5>
+                    <p class="text-muted small mb-0">
+                      Lunedì - Venerdì <br />9:00 - 12:30 <br />
+                      15:00 - 18:30 <br />
+                      Appuntamenti su prenotazione telefonica o via WhatsApp.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social -->
+              <div class="pt-4 border-top border-2">
+                <p class="small text-muted mb-2 fw-semibold">
+                  Puoi seguirmi su questi canali:
+                </p>
+                <div class="d-flex gap-2">
+                  <a
+                    href="https://www.facebook.com/nutrizionistasarahbranchesi/"
+                    target="_blank"
+                    class="btn btn-outline-dark btn-sm rounded-circle"
+                    style="
+                      width: 36px;
+                      height: 36px;
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/nutrizionistasarahbranchesi/"
+                    target="_blank"
+                    class="btn btn-outline-dark btn-sm rounded-circle"
+                    style="
+                      width: 36px;
+                      height: 36px;
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLONNA FORM DI CONTATTO -->
+          <div class="col-lg-7">
+            <div class="border p-4 p-md-5 rounded-4 h-100 bg-white shadow-sm">
+              <h3 class="fw-bold h4 mb-4">Invia una richiesta</h3>
+
+              <form action="#" method="POST">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nome" class="form-label small fw-semibold"
+                      >Nome e Cognome *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nome"
+                      name="nome"
+                      placeholder="Mario Rossi"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email" class="form-label small fw-semibold"
+                      >Email *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="mario@email.it"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="telefono" class="form-label small fw-semibold"
+                      >Telefono</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telefono"
+                      name="telefono"
+                      placeholder="+39 333 1234567"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="sede" class="form-label small fw-semibold"
+                      >Studio di riferimento</label
+                    >
+                    <select class="form-select" id="sede" name="sede">
+                      <option selected value="pesaro">Studio Pesaro</option>
+                      <option value="montecchio">Studio Montecchio</option>
+                      <option value="online">Consulenza Online</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="messaggio" class="form-label small fw-semibold"
+                      >Messaggio o Esigenze *</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="messaggio"
+                      name="messaggio"
+                      rows="4"
+                      placeholder="Descrivi brevemente il motivo della visita..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12 mt-4">
+                    <button
+                      type="submit"
+                      class="btn btn-primary-custom w-100 py-3 rounded-pill fw-semibold shadow-sm"
+                    >
+                      <i class="bi bi-send-fill me-2"></i> Invia Richiesta
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE DETTAGLIO AMBULATORI & MAPPE GOOGLE MAPS -->
+    <section class="py-5 bg-light-custom">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Dove Ricevo</h2>
+          <p class="text-muted">
+            Gli studi clinici attrezzati a Pesaro e Montecchio
+          </p>
+        </div>
+
+        <div class="row g-5">
+          <!-- SEDE PESARO -->
+          <div class="col-lg-6">
+            <div
+              class="bg-white p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-box me-3">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div>
+                    <h3 class="fw-bold h5 mb-0">Studio di Pesaro</h3>
+                    <span class="text-muted small">Pesaro (PU)</span>
+                  </div>
+                </div>
+                <p class="text-muted small mb-4">
+                  <strong>Indirizzo:</strong> Via XI Febbraio, 20, 1° piano,
+                  Pesaro (PU)
+                </p>
+
+                <!-- Mappa Google Maps Pesaro -->
+                <div class="map-container mb-4">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.2860712837287!2d12.909272499999998!3d43.90683819999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d194603870ed1%3A0x2a87a03bfc785391!2sV.le%20XI%20Febbraio%2C%2020%2C%2061121%20Pesaro%20PU!5e1!3m2!1sit!2sit!4v1791383001941!5m2!1sit!2sit"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                  ></iframe>
+                </div>
+              </div>
+
+              <a
+                href="https://maps.app.goo.gl/BCzM7rUJQwnr3nZcA"
+                target="_blank"
+                class="btn btn-outline-dark btn-sm w-100"
+              >
+                <i class="bi bi-map me-2"></i> Apri indicazioni stradali in
+                Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- SEDE MONTECCHIO -->
+          <div class="col-lg-6">
+            <div
+              class="bg-white p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-box me-3">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div>
+                    <h3 class="fw-bold h5 mb-0">Studio di Montecchio</h3>
+                    <span class="text-muted small"
+                      >Montecchio di Vallefoglia (PU)</span
+                    >
+                  </div>
+                </div>
+                <p class="text-muted small mb-4">
+                  <strong>Indirizzo:</strong> Via Carpegna, 18 Montecchio (PU)
+                </p>
+
+                <!-- Mappa Google Maps Montecchio (Vallefoglia) -->
+                <div class="map-container mb-4">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.3554471973152!2d12.74999427680239!3d43.85510447109326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ce318c1202d9d%3A0xf5d625fc6005c468!2sVia%20Carpegna%2C%2018%2C%2061022%20Montecchio%20PU!5e1!3m2!1sit!2sit!4v1791382963912!5m2!1sit!2sit"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                  ></iframe>
+                </div>
+              </div>
+
+              <a
+                href="https://maps.app.goo.gl/LyQwUa4ox3MpYb8Y9"
+                target="_blank"
+                class="btn btn-outline-dark btn-sm w-100"
+              >
+                <i class="bi bi-map me-2"></i> Apri indicazioni stradali in
+                Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer') %>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

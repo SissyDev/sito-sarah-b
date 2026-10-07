@@ -1,0 +1,173 @@
+:root {
+  --primary-color: #3da192;
+  --primary-hover: #318276;
+  --primary-light: #e8f4f2;
+  --text-dark: #2c3e50;
+}
+
+/* Aggiunge uno spazio di sicurezza per evitare che l'header copra le sezioni */
+html {
+  scroll-behavior: smooth; /* Rende lo scorrimento fluido quando clicchi sui link */
+}
+
+body {
+  color: var(--text-dark);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar-nav {
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+section[id] {
+  scroll-margin-top: 90px; /* Regola questo valore in base all'altezza effettiva del tuo header (es. 80px o 100px) */
+}
+
+/* Colori personalizzati brand */
+.text-primary-custom {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary-custom {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-light-custom {
+  background-color: var(--primary-light);
+}
+
+.btn-primary-custom {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #fff !important;
+  transition: all 0.2s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: #fff;
+}
+
+.btn-outline-primary-custom {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 500;
+}
+
+.btn-outline-primary-custom:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #f9fbfb 0%, #e8f4f2 100%);
+  padding: 5rem 0;
+}
+
+.img-sarah {
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 3rem rgba(61, 161, 146, 0.15);
+}
+
+/* Card Servizi & Sedi */
+.feature-card {
+  border: none;
+  border-radius: 1rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Sezione Sedi */
+.location-badge {
+  font-size: 0.9rem;
+  background: var(--primary-light);
+  color: var(--primary-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 50rem;
+  font-weight: 600;
+}
+
+.text-body-secondary {
+  color: #2c3e50 !important;
+}
+
+/* COOKIE POLICY */
+.policy-container {
+  max-width: 900px;
+}
+
+.policy-header h1 {
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.policy-content h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eef2ee;
+}
+
+.policy-content p {
+  margin-bottom: 1.2rem;
+  color: #4a5568;
+}
+
+.policy-content a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.policy-content a:hover {
+  color: var(--primary-hover);
+}
+
+/* Box in evidenza per i link utili */
+.useful-links-box {
+  background-color: var(--accent-card);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.useful-links-box h5 {
+  color: var(--primary-color);
+}
