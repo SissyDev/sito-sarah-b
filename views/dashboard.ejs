@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Admin - Gestione Ricette</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 20px; background: #f4f4f9; }
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        .btn-logout { background: #dc3545; color: white; padding: 8px 15px; text-decoration: none; border-radius: 4px; }
+        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 40px; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        textarea { height: 90px; }
+        .btn-submit { margin-top: 20px; background: #28a745; color: white; border: none; padding: 10px 15px; font-size: 16px; cursor: pointer; border-radius: 4px; }
+        table { width: 100%; background: white; border-collapse: collapse; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #343a40; color: white; }
+        img.thumb { width: 50px; height: 50px; object-fit: cover; border-radius: 4px; }
+        .btn-edit { background: #ffc107; color: black; padding: 5px 10px; text-decoration: none; border-radius: 4px; font-size: 14px; }
+        .btn-delete { background: #dc3545; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Dashboard Ricette</h2>
+        <a href="/admin/logout" class="btn-logout">Logout</a>
+    </header>
+
+    <!-- FORM DI AGGIUNTA O MODIFICA -->
+    <form action="<%= editRicetta ? '/admin/ricette/aggiorna/' + editRicetta.id : '/admin/ricette/aggiungi' %>" method="POST" enctype="multipart/form-data">
+        <h3><%= editRicetta ? 'Modifica Ricetta: ' + editRicetta.titolo : 'Aggiungi Nuova Ricetta' %></h3>
+
+        <label>Titolo:</label>
+        <input type="text" name="titolo" value="<%= editRicetta ? editRicetta.titolo : '' %>" required>
+
+        <label>Categoria:</label>
+        <select name="categoria">
+            <% const cat = editRicetta ? editRicetta.categoria : ''; %>
+            <option value="Primi piatti" <%= cat === 'Primi piatti' ? 'selected' : '' %>>Primi piatti</option>
+            <option value="Secondi piatti" <%= cat === 'Secondi piatti' ? 'selected' : '' %>>Secondi piatti</option>
+            <option value="Contorni" <%= cat === 'Contorni' ? 'selected' : '' %>>Contorni</option>
+            <option value="Dolci e Colazioni" <%= cat === 'Dolci e Colazioni' ? 'selected' : '' %>>Dolci e Colazioni</option>
+        </select>
+
+        <label>Immagine della Ricetta <%= editRicetta ? '(lascia vuoto per mantenere la precedente)' : '' %>:</label>
+        <input type="file" name="immagineFile" accept="image/*" <%= editRicetta ? '' : 'required' %>>
+
+        <label>Descrizione Breve:</label>
+        <input type="text" name="descrizioneBreve" value="<%= editRicetta ? editRicetta.descrizioneBreve : '' %>">
+
+        <label>Ingredienti (un ingrediente per riga):</label>
+        <textarea name="ingredienti"><%= editRicetta ? editRicetta.ingredienti.join('\n') : '' %></textarea>
+
+        <label>Preparazione:</label>
+        <textarea name="preparazione"><%= editRicetta ? editRicetta.preparazione : '' %></textarea>
+
+        <button type="submit" class="btn-submit"><%= editRicetta ? 'Salva Modifiche' : 'Crea Ricetta' %></button>
+        <% if (editRicetta) { %>
+            <a href="/admin/dashboard" style="margin-left: 15px; color: #666; text-decoration: none;">Annulla</a>
+        <% } %>
+    </form>
+
+    <!-- ELENCO RICETTE ESISTENTI -->
+    <h3>Ricette Esistenti (<%= ricette.length %>)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Immagine</th>
+                <th>Titolo</th>
+                <th>Categoria</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (ricette.length === 0) { %>
+                <tr><td colspan="4" style="text-align: center;">Nessuna ricetta presente.</td></tr>
+            <% } %>
+            <% ricette.forEach(r => { %>
+                <tr>
+                    <td><img src="<%= r.immagine %>" class="thumb" alt="foto"></td>
+                    <td><strong><%= r.titolo %></strong></td>
+                    <td><%= r.categoria %></td>
+                    <td>
+                        <a href="/admin/ricette/modifica/<%= r.id %>" class="btn-edit">Modifica</a>
+                        <form action="/admin/ricette/elimina/<%= r.id %>" method="POST" style="display:inline; background:none; padding:0; box-shadow:none; margin:0;" onsubmit="return confirm('Sei sicuro di voler eliminare questa ricetta?');">
+                            <button type="submit" class="btn-delete">Elimina</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+</body>
+</html>

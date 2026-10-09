@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Carica Ricetta</title>
+    <!-- Includiamo jQuery tramite CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background: #f4f4f9; }
+        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        textarea { height: 100px; }
+        button { margin-top: 20px; background: #28a745; color: white; border: none; padding: 10px 15px; font-size: 16px; cursor: pointer; border-radius: 4px; }
+        button:hover { background: #218838; }
+        #messaggio { margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h2>Aggiungi una nuova Ricetta</h2>
+    
+    <!-- Eventuale messaggio gestito dal server con EJS (opzionale) -->
+    <% if (locals.errore) { %>
+        <p style="color: red;"><%= errore %></p>
+    <% } %>
+
+    <form id="ricettaForm">
+        <label>Password Admin:</label>
+        <input type="password" name="password" required>
+
+        <label>Titolo:</label>
+        <input type="text" name="titolo" required placeholder="Es. Polpette">
+
+        <label>Categoria:</label>
+        <select name="categoria">
+            <option value="Primi piatti">Primi piatti</option>
+            <option value="Secondi piatti">Secondi piatti</option>
+            <option value="Contorni">Contorni</option>
+            <option value="Dolci e Colazioni">Dolci e Colazioni</option>
+        </select>
+
+        <label>Immagine della Ricetta:</label>
+        <input type="file" name="immagineFile" accept="image/*" required>
+
+        <label>Descrizione Breve:</label>
+        <input type="text" name="descrizioneBreve" placeholder="Breve riassunto...">
+
+        <label>Ingredienti (inserisci un ingrediente per riga):</label>
+        <textarea name="ingredienti" placeholder="300 g di pollo...&#10;1 zucchina media..."></textarea>
+
+        <label>Preparazione:</label>
+        <textarea name="preparazione" placeholder="Descrivi i passaggi..."></textarea>
+
+        <button type="submit">Salva Ricetta</button>
+    </form>
+
+    <p id="messaggio"></p>
+
+    <!-- Script jQuery corretto all'interno del tag script -->
+    <script>
+        $(document).ready(function() {
+            $('#ricettaForm').on('submit', async function(e) {
+                e.preventDefault();
+                
+                // Prende i dati del form (incluso il file immagine)
+                const formData = new FormData(this);
+                const $msgEl = $('#messaggio');
+                
+                $msgEl.css('color', 'blue').text('Caricamento in corso e upload su Cloudinary...');
+
+                try {
+                    const response = await fetch('/api/aggiungi-ricetta', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        $msgEl.css('color', 'green').text('✅ ' + result.messaggio);
+                        this.reset(); // Pulisce il form
+                    } else {
+                        $msgEl.css('color', 'red').text('❌ ' + result.errore);
+                    }
+                } catch (err) {
+                    $msgEl.css('color', 'red').text('❌ Errore di connessione al server.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,9 +1,9 @@
 const ricette = [
   {
-    id: "polpette-pollo-verdure",
+    id: "1",
     titolo: "Polpette di Pollo e Verdure",
     categoria: "Secondi piatti",
-    immagine: "/images/ricette/polpette_pollo_verdure.png", 
+    immagine: "https://res.cloudinary.com/fdtju2nr/image/upload/f_auto,q_auto/polpette_pollo_verdure", 
     descrizioneBreve: "Un ottimo modo per salvare gli avanzi rimasti in frigo.",
     ingredienti: [
       "300 g di pollo cotto avanzato (petto di pollo o pollo arrosto, senza pelle)",
@@ -20,11 +20,9 @@ const ricette = [
     preparazione: "Frulla il pollo cotto fino a renderlo sminuzzato. Grattugia la zucchina e la carota e taglia i pomodorini a  pezzetti piccoli. Se la zucchina è molto acquosa, strizzala leggermente. Mescola pollo, verdure, uovo, parmigiano e pangrattato fino a ottenere un composto lavorabile. Forma delle polpette. Disponile su una teglia rivestita con carta forno, spennellale con un filo d'olio. Cuoci a 190° C per circa 20 / 25 minuti, girandole a metà cottura. Se vuoi una superficie più dorata, termina con 2 / 3 minuti di grill."
   },
   {
-    id: "polpette-ricotta-piselli",
+    id: "2",
     titolo: "Polpette di Ricotta e Piselli",
     categoria: "Secondi piatti",
-    tempo: "25 min",
-    difficolta: "Facile",
     immagine: "/images/ricette/polpette_ricotta_piselli.png",
     descrizioneBreve: "Sfiziose, leggere e veloci da preparare. Ottime sia al forno che in friggitrice ad aria.",
     ingredienti: [

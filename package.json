@@ -13,9 +13,12 @@
   "dependencies": {
     "body-parser": "^2.3.0",
     "bootstrap": "^5.3.8",
+    "cloudinary": "^2.11.0",
     "dotenv": "^18.0.6",
     "ejs": "^7.0.1",
     "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "multer": "^2.4.0",
     "nodemailer": "^10.0.16"
   },
   "devDependencies": {
